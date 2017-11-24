@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<link href="jquery-mobile/jquery.mobile.theme-1.3.0.min.css" rel="stylesheet" type="text/css">
+<link href="jquery-mobile/jquery.mobile.structure-1.3.0.min.css" rel="stylesheet" type="text/css">
+<script src="jquery-mobile/jquery-1.11.1.min.js"></script>
+<script src="jquery-mobile/jquery.mobile-1.3.0.min.js"></script>
+</head>
+
+<body>
+<div data-role="page" id="page">
+  <div data-role="header">
+    <h1>EJERCICIOS JAVA</h1>
+  </div>
+  <div data-role="content">
+   <!--numero positivo y negativo -->
+    <div data-role="collapsible-set">
+     
+      <div data-role="collapsible">
+        <h3>Positivo o negativo</h3>
+        <form action="">
+        	<div data-role="fieldcontain">
+        	  <label for="textinput">Numero a verificar</label>
+        	  <input type="text" name="textinput" id="textinput" value=""  />
+        	  <input type="button" value="VERIFICAR" onClick="positivo();">
+      	  </div>
+      	  <h3 style="color: brown" id="num"></h3>
+        	
+        </form>
+        
+        
+      </div>
+      
+      <div data-role="collapsible" data-collapsed="true">
+        <h3>Ordenar</h3>
+         <!--ordenar  numeros -->
+         <div class="ui-grid-b">
+           <div class="ui-block-a"><input type="text" placeholder="numero 1"id="d1"></div>
+           <div class="ui-block-b"><input type="text" placeholder="numero 2"id="d2"></div>
+           <div class="ui-block-c"><input type="text" placeholder="numero 3"id="d3"></div>
+          
+         </div>
+         <h3 style="color: crimsonid;" id="mostrar1"></h3>
+         <input type="button" value="ORDENAR" onClick="ordenar();">
+         
+         
+        
+      </div>
+      
+       <!--Vocales -->
+      <div data-role="collapsible" data-collapsed="true">
+        <h3>Vocales</h3>
+        <div data-role="fieldcontain">
+          <label for="textinput2">Letra a evaluar:</label>
+          <input type="text" name="textinput2" id="vocal" maxlength="1" placeholder="Letra" />
+          
+          <button type="button" onClick="vocal();">VERIFICAR </button>
+        </div>
+        
+        <h3 id="mostrar2" style="color: chocolate;"></h3>
+      </div>
+
+            
+      <div data-role="collapsible" data-collapsed="true">
+        <h3>CRECIENTE</h3>
+       <div class="ui-grid-b">
+           <div class="ui-block-a"><input type="text" placeholder="numero 1"id="dd1"></div>
+           <div class="ui-block-b"><input type="text" placeholder="numero 2"id="dd2"></div>
+           <div class="ui-block-c"><input type="text" placeholder="numero 3"id="dd3"></div>
+          
+         </div>
+         <h3 style="color: crimsonid;" id="mostrar3"></h3>
+         <input type="button" value="ORDENAR" onClick="creciente();">
+         
+         
+      </div>
+      
+      <div data-role="collapsible" data-collapsed="true">
+        <h3>Mayor y menor</h3>
+        <div class="ui-grid-d">
+          <div class="ui-block-a"><input type="text" placeholder="numero 1"id="x1"></div>
+          <div class="ui-block-b"><input type="text" placeholder="numero 3"id="x2"></div>
+          <div class="ui-block-c"><input type="text" placeholder="numero 4"id="x3"></div>
+          <div class="ui-block-d"><input type="text" placeholder="numero 5"id="x4"></div>
+          <div class="ui-block-e"><input type="text" placeholder="numero 6"id="x5"></div>
+        </div>
+          <div class="ui-grid-d">
+          <div class="ui-block-a"><input type="text" placeholder="numero 7"id="x6"></div>
+          <div class="ui-block-b"><input type="text" placeholder="numero 8"id="x7"></div>
+          <div class="ui-block-c"><input type="text" placeholder="numero 9"id="x8"></div>
+          <div class="ui-block-d"><input type="text" placeholder="numero 10"id="x9"></div>
+          <div class="ui-block-e"><input type="text" placeholder="numero 11"id="x10"></div>
+        </div>
+       
+         <h3 style="color: crimsonid;" id="mostrar4"></h3>
+         <input type="button" value="ORDENAR" onClick="mayor();">
+         
+    </div>
+   
+   
+    <div data-role="collapsible" data-collapsed="true">
+        <h3>Multiplicacion</h3>
+       <div class="ui-grid-b">
+           <div class="ui-block-a"><input type="text" placeholder="numero 1"id="t1"></div>
+           <div class="ui-block-b"><input type="text" placeholder="numero 2"id="t2"></div>
+           <div class="ui-block-c"><input type="text" placeholder="numero 3"id="t3"></div>
+          
+         </div>
+         <h3 style="color: crimsonid;" id="mostrar5"></h3>
+         <input type="button" value="ORDENAR" onClick="igualar();">
+         
+         
+      </div>
+      
+       <div data-role="collapsible" data-collapsed="true">
+        <h3>Conversor</h3>
+        <div class="ui-grid-a">
+          <div class="ui-block-a">
+            <div data-role="fieldcontain">
+              <label for="textinput2">Kilogramos:</label>
+              <input type="text" name="textinput2" id="kilo" value=""  />
+            </div>
+          	
+          </div>
+          <div class="ui-block-b">
+          	 <form>
+<div class="ui-field-contain">
+    
+    <select name="select-native-1" id="select">
+    <option value="0">--Seleccione--</option>
+        <option value="1">gramos</option>
+        <option value="2">Toneladas</option>
+        <option value="3">libra</option>
+        <option value="4">onza</option>
+    </select>
+</div>
+</form>
+          </div>
+        </div>
+<h3 style="color: crimsonid; text-align: center" id="mostrar6"></h3>
+         <input type="button" value="ORDENAR" onClick="conversor();">
+         
+         
+      </div>
+      
+      
+      
+       <div data-role="collapsible" data-collapsed="true">
+        <h3>Multiplica</h3>
+          <div class="ui-grid-a">
+            <div class="ui-block-a">
+              <div data-role="fieldcontain">
+                <label for="textinput2">Sueldo:</label>
+                <input type="text" name="textinput2" id="sueldo" value=""  />
+              </div>
+            </div>
+            <div class="ui-block-b">
+              <div data-role="fieldcontain">
+                <label for="textinput3">Años</label>
+                <input type="text" name="textinput3" id="years" value=""  />
+              </div>
+            </div>
+          </div>
+         <h3 style="color: crimsonid;" id="mostrar7"></h3>
+         <input type="button" value="Calcular" onClick="sueldo();">
+         </div>
+         
+         
+         
+    </div>
+  	
+  	
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h4>Pie</h4>
+  </div>
+</div>
+
+
+</body>
+
+<script src="js/tarea.js"></script>
+</html>
